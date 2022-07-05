@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: cyan;
+    padding:0 10px;
+    height: 150px;
+}
+.rest_tag{
+    margin-right: auto;
+    font-size: 80px;
+    
+}
+.sign_in_image{
+   height: 20px;
+   width: 20px;
+   
+}
+.footer{
+    display: flex;
+    align-items: start;
+    width: 100%;
+    background-color: #607d8b;
+}
+.footer_infor{
+    width: 100%;
+}
+.footer_resources{
+    width: 100%;
+}
