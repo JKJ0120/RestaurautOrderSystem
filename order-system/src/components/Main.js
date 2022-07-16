@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import menuData from '../data/menu_types'
 import Menu from './main_contents/Menu'
 import SCart from './main_contents/SCart'
@@ -28,14 +28,13 @@ export default function Main(){
             name:item.name,
             price:item.price}
         ]))
-        setSubTotal(prevItem=>prevItem+item.price)
-      
-        
+        setSubTotal(prevItem=>prevItem+item.price)    
     }
+
     React.useEffect(()=>{
         setTax(subTotal*0.15)
         setTotal(subTotal+tax)
-    },[subTotal])
+    },[subTotal,tax])
    
     // console.log(subTotal)
     function addCartItem(item){
@@ -51,13 +50,12 @@ export default function Main(){
         else if(name==='Appetizer')setDishesArray(menuData.data.Appetizer)
         else setDishesArray(menuData.data.Dessert)
     }
-    //console.log(total)
-    // console.log(selectedItem)
+
     return (
         <main>
             <div className='menu_address'>
                 <p>210 Wentworth Dr, Halifax, Nova Scotia</p>
-                <p>(902)443-6112</p>
+                <p>(902)880-5112</p>
             </div>
             <SCart 
                 addCartItem={addCartItem}
@@ -67,7 +65,6 @@ export default function Main(){
                 total={total}
                 selectArray={selectedItem}
             />
-            
             <section className='menu_nav'>         
                 <div className='menu_nav_buttons'>
                     <button 

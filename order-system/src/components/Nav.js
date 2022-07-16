@@ -5,7 +5,7 @@ export default function Nav(){
         <nav>
            <h1 className='rest_tag'>Jay's Cabin</h1> 
            <div className='sign_container'>
-                <a href = 'www.google.com' id ='sign_in'>Sign in</a>
+                <a href = '/www.google.com' id ='sign_in'>Sign in</a>
                 <img src ={sign_in} alt='' className='sign_in_image'/>
            </div>         
         </nav>
